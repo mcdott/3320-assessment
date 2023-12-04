@@ -8,14 +8,6 @@
     />
     <link rel="stylesheet" href="PreSchoolCSS.css" />
     <style>
-      .swatch {
-        /* Remove this rule when you set your colors! */
-        background-color: red;
-        margin: 1px;
-        width: 100px;
-        height: 100px;
-      }
-
       /* main {
         width: 600px;
         margin: auto;
@@ -320,6 +312,38 @@
 
       showCart();
       getTotal();
+
+	  const colors = [
+		'#FF5733', '#33FF57', '#3357FF', '#FF33F5', '#33FFF8',
+		'#F8FF33', '#FF8333', '#33FF83', '#8373FF', '#FF3383',
+		'#33F8FF', '#F883FF', '#73FF33', '#3383FF', '#FF333F',
+		'#33FF3F', '#8333FF', '#3FFF33', '#FF338F', '#33FFFF',
+		'#F8F833', '#FF3F33', '#3FF833', '#3373FF', '#FF33A3',
+		'#33A3FF', '#A3FF33', '#833FF8', '#33FFA3', '#A3FF83',
+		'#FF33D7', '#33D7FF', '#D7FF33', '#3F83FF', '#FF3373',
+		'#3373F8', '#73FF83', '#FF33B8', '#33B8FF', '#B8FF33',
+		'#3FF8F8', '#FF3383', '#3383F8', '#83FF73', '#FF33F8',
+		'#338FF8', '#8FFF33', '#3FF883', '#FF3357', '#3357F8',
+		'#57FF83', '#FF3F73', '#3F73F8', '#73FF57', '#FF3FA3',
+		'#3FA3F8', '#A3FF57', '#FF3FD7', '#3FD7F8', '#D7FF57',
+		'#FF7383', '#7383F8', '#83FF57', '#FF73B8', '#73B8F8',
+		'#B8FF57', '#FF7373', '#7373F8', '#73FF3F', '#FF73F8',
+		'#73F8F8', '#73FF73', '#FF833F', '#833FF8', '#3FF857',
+		'#FF8383', '#8383F8', '#83FF3F', '#FF83B8', '#83B8F8',
+		'#B8FF3F', '#FF8373', '#8373F8', '#73FF8F', '#FF83F8',
+		'#83F8F8', '#83FF8F', '#FF8FA3', '#8FA3F8', '#A3FF8F',
+		'#FF8FD7', '#8FD7F8', '#D7FF8F', '#FFA383', '#A383F8',
+		'#83FFA3', '#FFA3B8', '#A3B8F8', '#B8FFA3', '#FFA373'
+		];
+
+		function assignColorsToSwatches() {
+			const swatches = document.querySelectorAll('.swatch');
+			swatches.forEach((swatch, index) => {
+        		swatch.style.backgroundColor = colors[index];
+			});
+		}
+
+		document.addEventListener('DOMContentLoaded', assignColorsToSwatches);
     </script>
   </body>
 </html>
