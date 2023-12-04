@@ -112,9 +112,15 @@ section {
 
 section#nav,
 section#banner,
+section#about,
 section#popular,
 section#footer {
   min-height: auto;
+}
+
+#banner {
+  display: flex;
+  justify-content: center;
 }
 
 section#popular {
@@ -144,6 +150,13 @@ section#popular .card img {
 
 section#popular .card p {
   margin-top: 1rem;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 
 /* Color Swatch Styles */
