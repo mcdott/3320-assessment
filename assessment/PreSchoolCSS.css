@@ -80,6 +80,11 @@ ul {
   list-style-type: none;
 }
 
+li {
+  margin-top: var(--spacing-base);
+  margin-bottom: var(--spacing-base);
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
@@ -119,8 +124,7 @@ section#footer {
 }
 
 #banner {
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 section#popular {
@@ -128,6 +132,8 @@ section#popular {
   justify-content: space-around;
   align-items: stretch;
   gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 section#popular .card {
@@ -157,6 +163,11 @@ section#popular .card p {
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  background-color: var(--color-light);
+}
+
+#contact form {
+  background-color: var(--color-lightest);
 }
 
 /* Color Swatch Styles */
