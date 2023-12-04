@@ -426,5 +426,38 @@
 
       document.addEventListener("DOMContentLoaded", assignColorsToSwatches);
     </script>
+    <script>
+      const template = document.createElement("template");
+
+      template.innerHTML = `
+	  <style>
+		@keyframes ticker {
+		  0% { transform: translateX(100%); }
+		  100% { transform: translateX(-100%); }
+		}
+  
+		.ticker-content {
+		  display: inline-block;
+		  padding-left: 100%;
+		  animation: ticker 10s linear infinite;
+		}
+	  </style>
+	
+	  <div class="ticker-content">
+		<slot></slot>
+	  </div>
+	`;
+
+      class TickerTape extends HTMLElement {
+        constructor() {
+          super();
+          const tempNode = template.content.cloneNode(true);
+          this._shadowRoot = this.attachShadow({ mode: "open" });
+          this._shadowRoot.appendChild(tempNode);
+        }
+      }
+
+      customElements.define("ticker-tape", TickerTape);
+    </script>
   </body>
 </html>
