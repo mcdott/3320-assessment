@@ -76,6 +76,10 @@ p {
   margin-bottom: var(--spacing-base);
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
@@ -108,7 +112,6 @@ section {
 
 section#nav,
 section#banner,
-section#about,
 section#popular,
 section#footer {
   min-height: auto;
@@ -162,7 +165,8 @@ section#popular .card p {
 /* Form Styles */
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="number"] {
   border: 5px solid var(--color-md-light);
   border-radius: 25px;
   padding: 1em;
