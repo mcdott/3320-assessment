@@ -71,6 +71,11 @@ h6 {
   font-size: var(--font-size-h6);
 }
 
+p {
+  margin-top: var(--spacing-base);
+  margin-bottom: var(--spacing-base);
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
@@ -96,14 +101,46 @@ abbr {
   cursor: help;
 }
 
+/* Section Styles */
 section {
   min-height: 100vh;
 }
 
 section#nav,
 section#banner,
+section#about,
+section#popular,
 section#footer {
   min-height: auto;
+}
+
+section#popular {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+section#popular .card {
+  background-color: var(--color-lightest);
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section#popular .card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+section#popular .card p {
+  margin-top: 1rem;
 }
 
 /* Form Styles */
